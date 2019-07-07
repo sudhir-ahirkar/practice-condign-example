@@ -21,6 +21,8 @@ public class Test {
         Integer i=new Integer(10);
 
         Object o=(Object)i;
+        System.out.println(i);
+        System.out.println(o);
 
         System.out.println(i==o);
     }

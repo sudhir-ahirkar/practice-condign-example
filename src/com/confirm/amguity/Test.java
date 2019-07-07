@@ -6,12 +6,16 @@ package com.confirm.amguity;
 public class Test {
 
     static int  sf=0;
-
-    public static int a=0;
+    public static final int a=0;
+    public static final int b=0;
+    public static final int c=0;
 
     public void m1(){
-         int a;
-//        System.out.print(a);
+//    	int b;
+//    	System.out.println(b);
+         int a=1;
+//         c=1;
+        System.out.print(a);
     }
 
 }

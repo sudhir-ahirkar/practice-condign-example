@@ -13,12 +13,18 @@ public class Test {
         b += 1L;
     }
 
-    public static void main(String[] args) {
+   //Note: Exception catch or throw if throw then throws should be part of method syntax
+//    public static void main(String[] args) throws IOException {
+    	 public static void main(String[] args) {
         try {
             throw new IOException("Hello");
         }catch(Exception ex) {
             System.out.println(ex.getMessage());
         }
+        
+      
+//            throw new IOException("Hello");
+        
     }
 
 
