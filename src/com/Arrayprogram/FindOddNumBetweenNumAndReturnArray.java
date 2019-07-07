@@ -1,7 +1,7 @@
 package com.Arrayprogram;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -15,7 +15,7 @@ public class FindOddNumBetweenNumAndReturnArray {
         int i=s.nextInt();
         int j=s.nextInt();
 //        int numArry[]= findNumbers(i,j);
-        int numArry[]= findNumbersDifferentWay(i,j);
+        Integer numArry[]= findNumbersDifferentWay(i,j);
 
         for (int num: numArry){
             System.out.println(num);
@@ -49,9 +49,9 @@ public class FindOddNumBetweenNumAndReturnArray {
             5
             */
 
-    public static int[] findNumbersDifferentWay(int i, int j){
+    public static Integer[] findNumbersDifferentWay(int i, int j){
 
-   ArrayList<Integer>  list=new ArrayList<Integer>();
+   List<Integer>  list=new ArrayList<Integer>();
 //        HashSet<Integer> hashSet=new HashSet<Integer>();
 
         for (int k = i; k <= j; k++) {
@@ -61,16 +61,15 @@ public class FindOddNumBetweenNumAndReturnArray {
 
         }
 
-        int numArr[]=new int[list.size()];
+//        Integer numArr[]=new Integer[list.size()];
+//
+//        for (int k = 0; k < list.size() ; k++) {
+//            numArr[k]=list.get(k);
+//        }
 
-        for (int k = 0; k < list.size() ; k++) {
-            numArr[k]=list.get(k);
-        }
 
-
-        return numArr;
-//        hashSet.toArray()
-//        return list.toArray(numArr);
+//    return numArr;
+      return  list.stream().toArray(Integer[]::new);
 
     }
 
