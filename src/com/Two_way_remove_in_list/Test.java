@@ -3,6 +3,7 @@ package com.Two_way_remove_in_list;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * Created by sudhir.ahirkar on 12/2/2017.
@@ -11,6 +12,8 @@ public class Test {
 
     public static void main(String args[]){
         final List<Integer> list = new ArrayList<Integer>();
+        
+//        final List<Integer> list = new CopyOnWriteArrayList();
 
         list.add(1);
         list.add(2);
@@ -35,11 +38,13 @@ public class Test {
 //        System.out.println("list====>"+list);
 
 
-        for (Integer i: list){
-
-            list.remove(i);
-
-        }
+//        for (Integer i: list){
+//
+//            list.remove(i);
+//
+//        }
+        
+        list.forEach(System.out::println);
 
         System.out.println("list====>"+list);
     }

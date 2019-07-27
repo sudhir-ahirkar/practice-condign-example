@@ -17,12 +17,12 @@ public class Test {
 
 
 
-        for(String s: ar){
-            if(!nonDuplicates.contains(s))
-                nonDuplicates.add(s);
-            else
-                duplicates.add(s);
-        }
+		for (String s : ar) {
+			if (nonDuplicates.contains(s))
+				duplicates.add(s);
+			else
+				nonDuplicates.add(s);
+		}
 
         System.out.println("nonDuplicates==>"+nonDuplicates);
         System.out.println("duplicates==>"+duplicates);

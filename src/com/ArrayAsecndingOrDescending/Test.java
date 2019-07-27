@@ -23,6 +23,8 @@ public class Test {
         Arrays.sort(string, Collections.reverseOrder());
         for(String s: string)
             System.out.println("Descending sorting==>"+s);
+        
+       Object b =new Object();
 
 }
 

@@ -61,15 +61,15 @@ public class FindOddNumBetweenNumAndReturnArray {
 
         }
 
-//        Integer numArr[]=new Integer[list.size()];
+        Integer numArr[]=new Integer[list.size()];
 //
 //        for (int k = 0; k < list.size() ; k++) {
 //            numArr[k]=list.get(k);
 //        }
 
 
-//    return numArr;
-      return  list.stream().toArray(Integer[]::new);
+    return numArr;
+//      return  list.stream().toArray(Integer[]::new);
 
     }
 
