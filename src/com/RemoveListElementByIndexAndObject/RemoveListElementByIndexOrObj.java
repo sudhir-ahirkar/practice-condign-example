@@ -13,6 +13,7 @@ public class RemoveListElementByIndexOrObj {
     public static void main(String args[]){
 
         List<String> lst=new CopyOnWriteArrayList<String>();
+//        List<String> lst=new ArrayList<String>();
         lst.add("Sudhir Ahirkar");
         lst.add("Arjun");
         lst.add("Sagar");

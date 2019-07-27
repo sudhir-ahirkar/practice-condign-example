@@ -21,9 +21,9 @@ public class ThreadJoinExample {
 
         t2.start();
 
-        //start third thread only when first thread is dead
+        //start third thread only when second thread is dead
         try {
-            t1.join();
+            t2.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

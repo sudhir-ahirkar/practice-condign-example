@@ -69,14 +69,14 @@ public class Pyramid_Pattern {
     01234
     012345
     */
-        printPattern();
+//        printPattern();
         /*
         1
         22
         333
         4444
         555555*/
-        printAbovePattern();
+//        printAbovePattern();
         /*
         12345
         12345
@@ -84,7 +84,7 @@ public class Pyramid_Pattern {
         12345
         12345
         */
-        printAbovePattern1();
+//        printAbovePattern1();
 
         /*
         AAAAA
@@ -95,7 +95,10 @@ public class Pyramid_Pattern {
         */
 
 
-        printAbovePattern2();
+//        printAbovePattern2();
+    	
+    	
+    	printPatternDummy();
       }
 
     public static void drawPyramidPattern() {
@@ -176,6 +179,22 @@ public class Pyramid_Pattern {
             System.out.println("");
             a++;
         }
+    }
+    
+   ///===========================================================================================================
+    
+    
+    public static void printPatternDummy() {
+    	for(int i =5; i>0; i--) {
+    	
+    		for(int j =0; j<i; j++) {
+        		
+        		System.out.print("*");
+        	}
+    		
+    		System.out.println();
+    		
+    	}
     }
 
 

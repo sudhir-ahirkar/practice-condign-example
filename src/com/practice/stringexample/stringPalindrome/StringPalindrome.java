@@ -10,7 +10,7 @@ public class StringPalindrome {
 
 
 
-        if(isPalindromeString("abaqwea"))
+        if(isPalindromeString("aba"))
             System.out.print("String is Palindrome");
         else
             System.out.print("String is not Palindrome");
