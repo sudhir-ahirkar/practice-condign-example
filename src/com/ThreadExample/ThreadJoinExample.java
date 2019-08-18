@@ -12,7 +12,7 @@ public class ThreadJoinExample {
 
         t1.start();
 
-        //start second thread after waiting for 2 seconds or if it's dead
+        //start second thread after waiting for 4 seconds or if it's dead
         try {
             t1.join(4000);
         } catch (InterruptedException e) {

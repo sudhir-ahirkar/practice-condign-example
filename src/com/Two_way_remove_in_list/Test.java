@@ -21,21 +21,21 @@ public class Test {
 
 
 //        Arrays.sort(list);
-       /* The reason is that there are two removal operations on a List:
+//        The reason is that there are two removal operations on a List:
+//
+//        remove(int index)
+//        remove(Object obj)
+//        The JVM will always select the most specific overload of a method; and here we pass an int as an argument, the code therefore removes the element at index 2.
+//
+//        To remove the _element_ 2 from the list, the following needs to be written:*/
 
-        remove(int index)
-        remove(Object obj)
-        The JVM will always select the most specific overload of a method; and here we pass an int as an argument, the code therefore removes the element at index 2.
+        list.remove(2);
+        list.remove(Integer.valueOf(2));
 
-        To remove the _element_ 2 from the list, the following needs to be written:*/
-
-//        list.remove(2);
-//        list.remove(Integer.valueOf(2));
-
-//        list.remove(new Integer(2));
+        list.remove(new Integer(2));
 
 
-//        System.out.println("list====>"+list);
+        System.out.println("list====>"+list);
 
 
 //        for (Integer i: list){

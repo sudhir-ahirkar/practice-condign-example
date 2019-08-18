@@ -49,9 +49,9 @@ public class RecurstionStringTest {
         System.out.println(str.length());
         System.out.println(str.substring(0, str.length()));
         System.out.println(str.substring(0, str.length()-1));
-        RecurstionStringTest obj = new RecurstionStringTest(); 
-        String reverseString=obj.reverse(str);
-        System.out.println(reverseString);
+//        RecurstionStringTest obj = new RecurstionStringTest(); 
+//        String reverseString=obj.reverse(str);
+//        System.out.println(reverseString);
     }     
 	
 }

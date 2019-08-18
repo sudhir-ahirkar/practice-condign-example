@@ -6,7 +6,7 @@ package com.MultiplePublicClasses;
 public class Test {
 
 
-    public class Test1{
+    class Test1{
 
     }
 }

@@ -7,7 +7,7 @@ import java.util.Objects;
  */
 public class Sigleton {
 
-    private static Sigleton sigleton;
+    private static Sigleton sigleton=null;// If you assign declare final, you can instantciation in getSingleton() method.
 
    private Sigleton(){
 

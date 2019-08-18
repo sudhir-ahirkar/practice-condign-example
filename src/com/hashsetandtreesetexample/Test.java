@@ -11,7 +11,7 @@ public class Test {
 		
 //		[null, Sagar, Ahirkar, Sudhir]
 		Set<String> hashSet=new HashSet();
-		hashSet.add(null);
+//		hashSet.add(null);
 		hashSet.add("Sudhir");
 		hashSet.add("Sagar");
 		hashSet.add(null);

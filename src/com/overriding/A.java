@@ -10,7 +10,7 @@ public class A {
        return  null;
     }
 
-//    public Number m2(){
-//        return  0;
-//    }
+    public Number m2(){
+        return  0;
+    }
 }

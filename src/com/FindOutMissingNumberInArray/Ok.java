@@ -17,9 +17,12 @@ public class Ok {
 
             int size=ars.length+1;
 
-            int expectedTotal=size*(size+1/2);
-
+            int expectedTotal=size*(size+1)/2;
+            Arrays.sort(ars);
+//            
+          Integer summ = Arrays.asList(ars).stream().reduce(0,Integer::sum);
             System.out.println("expectedTotal===."+expectedTotal);
+            System.out.println(expectedTotal-summ);
 
 
         }

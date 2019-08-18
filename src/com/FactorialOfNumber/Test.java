@@ -9,7 +9,7 @@ public class Test {
 
     public static void main(String args[]) {
 ///It is good for small number
-        int num=3;
+        int num=4;
          int factorial=1;
         for (int i = 1; i <= num; i++) {
           factorial=factorial*i;

@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by sudhir.ahirkar on 12/31/2017.
  */
-public class Employee implements Serializable{
+public class Employee implements Serializable,Comparable<Employee>{
 
     private int id;
 
@@ -51,7 +51,8 @@ public class Employee implements Serializable{
     public int hashCode() {
 //        return super.hashCode();
 
-        return getName().hashCode()+id;
+//        return getName().hashCode()+id;
+        return id;
     }
 
     @Override
@@ -64,9 +65,22 @@ public class Employee implements Serializable{
             return false;
         }
         Employee employee=(Employee) obj;
-        if(getId()==employee.getId() & getName().equals(employee.getName()))
+//        if(getId()==employee.getId() & getName().equals(employee.getName()))
+//            return true;
+        if(getId()==employee.getId())
             return true;
         else
             return  false;
     }
+
+	@Override
+	public int compareTo(Employee o) {
+		// TODO Auto-generated method ub
+		return this.age -o.getAge();
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", department=" + department + ", age=" + age + "]";
+	}
 }

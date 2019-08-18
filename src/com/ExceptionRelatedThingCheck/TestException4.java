@@ -14,7 +14,7 @@ public class TestException4 {
     public void ok() throws Exception {
     }
 
-    public void foo() throws NullPointerException{
+    public void foo() {
 
     }
 }

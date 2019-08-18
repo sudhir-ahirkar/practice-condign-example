@@ -44,6 +44,10 @@ class Stringfun
                 case 'o':
                 case 'u':
                     vCount++;
+//                case ' ':
+//                case '.':
+//                	 wCount++;
+                	
             }
 
             if (c >= 65 && c <= 90)

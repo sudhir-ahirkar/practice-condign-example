@@ -48,7 +48,7 @@ public class ProgramToCheckValidMobilNum {
 
     public static void main(String[] args)
     {
-        String s = "347873923408";
+        String s = "7873923408";
         if (isValid(s))
             System.out.println("Valid Number");
         else

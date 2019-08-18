@@ -8,14 +8,17 @@ import java.util.concurrent.CopyOnWriteArrayList;
 /**
  * Created by sudhir.ahirkar on 12/9/2017.
  */
+
+//Note: We can remove elements from list using index based and but we can the same not doing using iterations
+
 public class RemoveListElementByIndexOrObj {
 
     public static void main(String args[]){
 
-        List<String> lst=new CopyOnWriteArrayList<String>();
-//        List<String> lst=new ArrayList<String>();
+//        List<String> lst=new CopyOnWriteArrayList<String>();
+        List<String> lst=new ArrayList<String>();
         lst.add("Sudhir Ahirkar");
-        lst.add("Arjun");
+        lst.add("Arjun kjhkjhkjh");
         lst.add("Sagar");
 
         lst.add("Nilesh");
@@ -24,14 +27,14 @@ public class RemoveListElementByIndexOrObj {
 
 
 
-       /* for (int i = 0; i < lst.size(); i++) {
+      for (int i = 0; i < lst.size(); i++) {
 
            String st= lst.get(i);
 
-            if(st.length()>6)
+//            if(st.length()>6)
                 lst.remove(i);
 
-        }*/
+        }
 
 
         /*List before remove===>[Sudhir Ahirkar, Arjun, Sagar, Nilesh]
@@ -44,15 +47,19 @@ public class RemoveListElementByIndexOrObj {
         at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
         at java.lang.reflect.Method.invoke(Method.java:497)
         at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)*/
-      Iterator<String> s= lst.iterator();
+//      Iterator<String> s= lst.iterator();
 
-     while (s.hasNext()){
-        lst.remove(s.next()) ;
-     }
-        /*for(String st: lst){
-            if(st.length()>6)
-                lst.remove(st);
-        }*/
+//     while (s.hasNext()){
+//        lst.remove(s.next()) ;
+//     }
+      
+      
+//       for(String st: lst){
+//            if(st.length()>6)
+//                lst.remove(st);
+//        }
+       
+       
         System.out.println("List after remove===>"+lst.toString());
 
 
