@@ -9,8 +9,8 @@ public class B extends A{
 public String m1(){
         return  null;
     }
-
-    public Integer m2(){
-        return  0;
+@Override
+    public Float m2(){
+        return  0.0f;
     }
 }

@@ -53,5 +53,10 @@ public class ProgramToCheckValidMobilNum {
             System.out.println("Valid Number");
         else
             System.out.println("Invalid Number");
+        
+        Integer[] in=new Integer[1];
+        System.out.println(in.getClass());
     }
+    
+   
 }

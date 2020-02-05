@@ -68,8 +68,8 @@ public class FindOddNumBetweenNumAndReturnArray {
 //        }
 
 
-    return numArr;
-//      return  list.stream().toArray(Integer[]::new);
+//    return numArr;
+      return  list.stream().toArray(Integer[]::new);
 
     }
 

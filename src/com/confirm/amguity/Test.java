@@ -12,7 +12,7 @@ public class Test {
 
     public void m1(){
 //    	int b;
-//    	System.out.println(b);
+    	System.out.println(b);
          int a=1;
 //         c=1;
         System.out.print(a);

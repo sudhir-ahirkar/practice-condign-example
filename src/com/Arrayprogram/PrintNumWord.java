@@ -1,5 +1,6 @@
 package com.Arrayprogram;
 
+import java.io.IOException;
 /**
  * Created by sudhir.ahirkar on 12/16/2017.
  * Print number of words, vowels and frequency of each character
@@ -7,13 +8,12 @@ package com.Arrayprogram;
  */
 // Java program to print Number of Words,
 // Vowels and Frequency of Each Character
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+import java.util.Map;
+import java.util.TreeMap;
 
-class Stringfun
+public class PrintNumWord
 {
-    String str = "Geeks for Geeks.";
+    String str = "Geeks for Geeks. ok i am";
 
     void words()
     {
@@ -93,7 +93,7 @@ class Stringfun
     // Driver program to run and test above program
     public static void main(String args[]) throws IOException
     {
-        Stringfun obj = new Stringfun();
+      PrintNumWord obj = new PrintNumWord();
         obj.words();
         obj.frequency();
     }
