@@ -18,7 +18,6 @@ public class ProducerConsumerProblem {
 //    int count = 0;
 //    while(true) {
 //      lock.lock();
-//      
 //      try {
 //        while (list.size() == CAPACITY) 
 //          removed.await();
