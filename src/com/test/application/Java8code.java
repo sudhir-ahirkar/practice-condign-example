@@ -8,9 +8,11 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.function.Function;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class Java8code {
@@ -38,7 +40,7 @@ public class Java8code {
     
     Integer int1=Integer.valueOf(20);
     Integer int2=Integer.valueOf(20);
-    System.out.println(int1.equals(int2));
+    System.out.println("check flyweight==>"+int1.equals(int2));
     System.out.println(int1==int2);
     
     
@@ -105,13 +107,18 @@ public class Java8code {
     System.err.println(lowerCase.apply("manoj"));
     
     //15.upperCaseToLowerCase
-    Function<String, String> upperCases= (String s)->s.toLowerCase();
+    Function<String, String> upperCases= (s)->s.toLowerCase();
     System.out.println(upperCases.apply("MANOJ"));
     
     
     //6.sortingAsscendingOrder
     Set<Integer> sortingAsscendingOrderSet=arrayToArrayList.stream().collect(Collectors.toSet());
     System.out.println("sortingAsscendingOrderSet:"+sortingAsscendingOrderSet);
+    
+    
+  Set<Integer> set=   arrayToArrayList.stream().filter(s->Collections.frequency(arrayToArrayList, s)==1).collect(Collectors.toSet());
+  Map<Integer,Integer>  intMap= set.stream().collect(Collectors.toMap(a->a*1,a-> a*2));
+  System.out.println("Converted list to Map==>"+intMap);
     
     }
 }

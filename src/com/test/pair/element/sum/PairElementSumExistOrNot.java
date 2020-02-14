@@ -35,6 +35,7 @@ public class PairElementSumExistOrNot {
        arr[1]=val1;
        System.out.println("Indexes are "+val+" "+ val1 +" values are "+ arr_int[i] +" and" + arr_int[val]);
         
+       break;
       }
       
     }

@@ -1,17 +1,25 @@
 package com.test.application;
 
 public class SumOfPositiveAndNegativeClosestToZeroOfArrayExample {
-  public static void main (String[] args) 
+  public static void main (String[] args) throws Exception 
   {
-    int arr[] = {1, 8, 2, 7, 8, 1};
+    int arr[] = {1,7,9,3,-8,8,9,-0,7};
     int size = arr.length;
     int l, r, min_sum, sum, min_l_num, min_r_num;
   
+//    validateInput(size);
+//    long ld=1L;
+//    switch(ld) { /// long not supported by switch
+//      
+//    }
+    
     if(size < 2)
     {
       System.out.println("Invalid Input");
       return;
+      
     }
+   
     
     min_l_num = 0;
     min_r_num = 1;
@@ -34,4 +42,14 @@ public class SumOfPositiveAndNegativeClosestToZeroOfArrayExample {
     System.out.println("Two elements whose sum is minimum are "+
                       arr[min_l_num]+ " and "+arr[min_r_num]);
   }
+  
+  public static void  validateInput(int size) throws Exception{
+      if(size < 2)
+      {
+        System.out.println("Invalid Input");
+//        return;
+        
+        throw new Exception("Please provide valid input");
+      }
+    }
 }

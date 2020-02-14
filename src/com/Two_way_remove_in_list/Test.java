@@ -30,19 +30,19 @@ public class Test {
 //        To remove the _element_ 2 from the list, the following needs to be written:*/
 
         list.remove(2);
-        list.remove(Integer.valueOf(2));
+//        list.remove(Integer.valueOf(2));
 
-        list.remove(new Integer(2));
+//        list.remove(new Integer(2));
 
 
         System.out.println("list====>"+list);
 
 
-        for (Integer i: list){
-
-            list.remove(i);
-
-        }
+//        for (Integer i: list){
+//
+//            list.remove(i);
+//
+//        }
         
         list.forEach(System.out::println);
 

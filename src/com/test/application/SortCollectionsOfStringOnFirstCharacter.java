@@ -34,6 +34,7 @@ public class SortCollectionsOfStringOnFirstCharacter {
    List<Employee> sortedEmpListOnString=  empList.stream().sorted(Comparator.comparing(Employee::getName)).collect(Collectors.toList());
    System.out.println("===>"+sortedEmpListOnString);
    
+   
    List<Employee> sortedEmpListOnStringReversed=  empList.stream().sorted(Comparator.comparing(Employee::getName).reversed()).collect(Collectors.toList());
    System.out.println("===>"+sortedEmpListOnStringReversed); 
 
