@@ -44,6 +44,7 @@ public class Test {
 //
 //
 // 4) Buetiful arrangement problems:
+//    https://cheonhyangzhang.gitbooks.io/leetcode-solutions/content/solutions-501-550/526-beautiful-arrangement.html
 
     
     int[] intArr= {1,1,3,4,6,8,10,14,6,7,23,12,45};
