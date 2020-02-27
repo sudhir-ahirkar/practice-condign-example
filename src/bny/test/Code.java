@@ -8,7 +8,7 @@ public enum Code {
 //10003
 //10004
   
-  public Code method(int code) {
+  public static Code method(int code) {
     
    switch (code) {
     case 10001:
@@ -34,5 +34,10 @@ public enum Code {
  
     
     
+  }
+  
+  public static void main(String[] args) {
+   Code c= Code.method(10008);
+   System.out.println(c);
   }
 }

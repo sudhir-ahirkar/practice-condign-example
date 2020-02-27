@@ -55,28 +55,33 @@ public class Test {
   int maxVal=  returnMaxVal(intArr,j);
   System.out.println(maxVal);
   
- int l= getListBinaryNum(14);
+ int l= getListBinaryNum(5548);
+ System.out.println(l);
   
   
 
   }
 
   private static int getListBinaryNum(int i) {
-    int l = 19; 
+//    int l = 19; 
     // returns the string representation of the unsigned int value 
     // represented by the argument in binary (base 2) 
-    System.out.println("Binary is " + Integer.toBinaryString(l)); 
+//    System.out.println("Binary is " + Integer.toBinaryString(i)); 
 
-    l = 9; 
-    System.out.println("Binary is " + Integer.toBinaryString(l)); 
+//    l = 9; 
+//    System.out.println("Binary is " + Integer.toBinaryString(l)); 
+//    
+    String binary=Integer.toBinaryString(i);
+//    System.out.println(new StringBuilder(binary).reverse());
+   String s= new StringBuilder(binary).reverse().substring(3, 4);
+//   System.out.println(s);
+//    System.out.println(binary);
     
-    String binary=Integer.toBinaryString(l);
-    System.out.println(binary);
+//    String bs=convertIntToBinary(19);
+//    System.out.println(bs);
+//   Assert.assertEquals(1,Integer.parseInt(s));
     
-    String bs=convertIntToBinary(19);
-    System.out.println(bs);
-    
-    return l;
+    return Integer.parseInt(s);
   }
 
   private static String convertIntToBinary(int n) {
@@ -103,32 +108,6 @@ public class Test {
     return j;
   }
   
-  public Code method(int code) {
-    
-    switch (code) {
-     case 10001:
-       return ABOSTE;
-//       break;
-     
-      case 10002:
-         
-        return BBBBB;
-         
-      case 10003:
-        
-        return CCCC;
-        
-      case 10004:
-        
-        return DDDD;
-
-     default :
-       
-       throw new IllegalArgumentException("code not found");
-   }
-  
-     
-     
-   }
+ 
 
 }
