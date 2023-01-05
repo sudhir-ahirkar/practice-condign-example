@@ -2,6 +2,7 @@ package com.OverrideHashcodeAndEqualInEmployeeAndCheckWorkOrNot;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Created by sudhir.ahirkar on 12/31/2017.
@@ -30,16 +31,15 @@ public class Test {
         employee4.setAge(25);
         employee4.setName("Arjun");
 
-//        Set<Employee> empSet=new TreeSet<>();
-        Set<Employee> empSet=new HashSet<>();
+        Set<Employee> empSet=new TreeSet<>();  // Need to focus on , if object is treeset then object should be comparable and not work on hashing
+//      Set<Employee> empSet=new HashSet<>(); // if we don't override equal and hashcode then object equality will be basis on Obj memory location hashcode
+        // but if we override then equal and hashcode then equality will be on equal and hashcode implementation
         empSet.add(employee1);
         empSet.add(employee2);
         empSet.add(employee3);
         empSet.add(employee4);
-        
-        
-
         System.out.println("Check size===>"+empSet);
+
         
     }
 

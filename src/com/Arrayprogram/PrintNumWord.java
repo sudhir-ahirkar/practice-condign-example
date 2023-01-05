@@ -8,12 +8,16 @@ import java.io.IOException;
  */
 // Java program to print Number of Words,
 // Vowels and Frequency of Each Character
+import java.util.Arrays;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class PrintNumWord
 {
-    String str = "Geeks for Geeks. ok i am";
+    String str = "Geeks for Geeks ok i am";
 
     void words()
     {
@@ -44,6 +48,7 @@ public class PrintNumWord
                 case 'o':
                 case 'u':
                     vCount++;
+//                break;
 //                case ' ':
 //                case '.':
 //                	 wCount++;
@@ -76,7 +81,7 @@ public class PrintNumWord
             Integer c = hmap.get(str.charAt(i));
 
             // If this is first occurrence of element
-            if (hmap.get(str.charAt(i)) == null)
+            if (c == null)
                 hmap.put(str.charAt(i), 1);
 
                 // If elements already exists in hash map
@@ -88,6 +93,10 @@ public class PrintNumWord
         for (Map.Entry m:hmap.entrySet())
             System.out.println("Character = " + m.getKey() +
                     " Frequency = " + m.getValue());
+        char [] arr = str.toCharArray();
+   Map<Character,Long> map =  Arrays.stream(Stream.of(arr).toArray(Character[]::new)).sequential().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+//        Map<Character,Long>   map = Arrays.stream(Stream.of(arr).toArray(Character[]::new)).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println("map===>"+map);
     }
 
     // Driver program to run and test above program

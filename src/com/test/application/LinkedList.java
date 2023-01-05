@@ -1,6 +1,6 @@
 package com.test.application;
 
-import com.test.application.rotateLinkedList.ListNode;
+//import com.test.application.rotateLinkedList.ListNode;
 
 public class LinkedList {
 

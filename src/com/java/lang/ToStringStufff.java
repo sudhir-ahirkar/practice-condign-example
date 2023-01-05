@@ -4,7 +4,7 @@ package com.java.lang;
  * Created by sudhir.ahirkar on 12/11/2017.
  */
 public class ToStringStufff {
-String s="asdf";
+    String s="asdf";
 	
 	public ToStringStufff(String s){
 		this.s=s;

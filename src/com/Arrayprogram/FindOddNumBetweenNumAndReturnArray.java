@@ -1,8 +1,8 @@
 package com.Arrayprogram;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * Created by sudhir.ahirkar on 12/16/2017.
@@ -15,6 +15,15 @@ public class FindOddNumBetweenNumAndReturnArray {
         int i=s.nextInt();
         int j=s.nextInt();
 //        int numArry[]= findNumbers(i,j);
+
+      List<Integer> lst =  IntStream.range(i,j).filter(e->e%2!=0).boxed().collect(Collectors.toList());
+
+        Integer[] arr = IntStream.range(i,j).boxed().filter(e->e%2!=0).toArray(Integer[]::new);
+        int[] ints = IntStream.range(i, j).filter(e -> e % 2 != 0).toArray();
+        System.out.println("Processed Arrays ===>"+Arrays.toString(ints));
+        Arrays.stream(arr).forEach(System.out::println);
+
+        System.out.println("===================================================");
         Integer numArry[]= findNumbersDifferentWay(i,j);
 
         for (int num: numArry){

@@ -23,6 +23,11 @@ public class Test {
         for (String s : str)
             System.out.print(s + " ");
 
+        System.out.println("\n\nInteger Object array default values:");
+        Integer obj[] = new Integer[5];
+        for (Integer val : obj)
+            System.out.print(val + " ");
+
         System.out.println("\n\nInteger array default values:");
         int num[] = new int[5];
         for (int val : num)

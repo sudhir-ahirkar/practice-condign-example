@@ -28,7 +28,7 @@ public class FactorialCalculator implements Callable<Integer> {
         TimeUnit.MILLISECONDS.sleep(20);
       }
     }
-    System.out.println(Thread.currentThread().getName()+" Result for number - " + number + " -> " + result);
+//    System.out.println(Thread.currentThread().getName()+" Result for number - " + number + " -> " + result);
     return result;
   }
 
@@ -44,17 +44,17 @@ public class FactorialCalculator implements Callable<Integer> {
       resultList.add(result);
     }
     
-//    for(Future<Integer> future : resultList)
-//    {
-//          try
-//          {
-//              System.out.println("Future result is - " + " - " + future.get() + "; And Task done is " + future.isDone());
-//          } 
-//          catch (InterruptedException | ExecutionException e) 
-//          {
-//              e.printStackTrace();
-//          }
-//      }
+    for(Future<Integer> future : resultList)
+    {
+          try
+          {
+              System.out.println("Future result is - " + " - " + future.get() + "; And Task done is " + future.isDone());
+          }
+          catch (InterruptedException | ExecutionException e)
+          {
+              e.printStackTrace();
+          }
+      }
       //shut down the executor service now
 //    newFixedThreadPool.shutdown();
     

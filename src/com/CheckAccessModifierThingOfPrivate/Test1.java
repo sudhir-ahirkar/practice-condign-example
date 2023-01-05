@@ -23,9 +23,14 @@ int l=0;
 
 
 
-   /* Answer: Well this is a strange situation. We all have seen NullPointerException when we invoke a method on object that is NULL. But here this program will work and prints â€œTest foo calledâ€�.
+   /* Answer: Well this is a strange situation. We all have seen NullPointerException when
+    we invoke a method on object that is NULL. But here this program will work and prints
+     â€œTest foo calledâ€�.
 
-    The reason for this is the java compiler code optimization. When the java code is compiled to produced byte code, it figures out that foo() is a static method and should be called using class. So it changes the method call obj.foo() to Test.foo() and hence no NullPointerException.
+    The reason for this is the java compiler code optimization.
+    When the java code is compiled to produced byte code, it figures out that foo() is a static method
+     and should be called using class. So it changes the method call obj.foo() to Test.foo() and
+      hence no NullPointerException.
     */
 //    public static String foo(){
 //        System.out.println("Test foo called");

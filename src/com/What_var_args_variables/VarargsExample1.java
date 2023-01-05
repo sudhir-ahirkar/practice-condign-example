@@ -1,5 +1,7 @@
 package com.What_var_args_variables;
 
+import java.util.Arrays;
+
 /**
  * Created by sudhir.ahirkar on 12/2/2017.
  */
@@ -22,6 +24,7 @@ public class VarargsExample1 {
     static void display(String... values){
 
         System.out.println("display method invoked ");
+        Arrays.stream(values).forEach(e->System.out.println(e));
     }
 
     public static void main(String args[]){

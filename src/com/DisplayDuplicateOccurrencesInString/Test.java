@@ -1,6 +1,8 @@
 package com.DisplayDuplicateOccurrencesInString;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Created by sudhir.ahirkar on 12/3/2017.
@@ -41,6 +43,8 @@ public class Test
         for(char c1: c){
             System.out.println(c1+"==="+Collections.frequency(characters,c1));
         }
+
+//        Stream.of(c).mapToObj(e->(Character)e).filter(e->Collections.frequency(c,e)>1).collect(Collectors.toList());
 
 
 

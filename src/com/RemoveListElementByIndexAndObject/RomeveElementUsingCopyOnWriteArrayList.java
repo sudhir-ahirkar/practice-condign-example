@@ -29,7 +29,8 @@ public class RomeveElementUsingCopyOnWriteArrayList {
            String st= lst.get(i);
 
             if(st.length()>6)
-                lst.remove(i);
+//                lst.remove(i);
+                lst.add("jdj");
 
         }
 
@@ -37,6 +38,9 @@ public class RomeveElementUsingCopyOnWriteArrayList {
 //            if(st.length()>6)
 //                lst.remove(st);
 //        }
+
+
+
         System.out.println("List after remove===>"+lst.toString());
 
 

@@ -6,7 +6,7 @@ public class Test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-  System.out.println(indexFor(554881574,15));
+  System.out.println(indexFor(51574,15));
   HashMap hm=new HashMap();
 	}
 	

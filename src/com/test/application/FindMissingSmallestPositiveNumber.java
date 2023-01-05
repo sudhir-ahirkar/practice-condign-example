@@ -1,7 +1,9 @@
 package com.test.application;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
+
+import static java.util.Arrays.*;
 
 public class FindMissingSmallestPositiveNumber {
   // Find the smallest positive number missing from an unsorted array : Hashing Implementation
@@ -24,9 +26,22 @@ public class FindMissingSmallestPositiveNumber {
   public static void main(String[] args) {
     int a[] = {-5, 2, 0, -1, -10, 15};
     int size = a.length;
-
+//    int missing_num = missingNumberPractice(a,size);
     System.out.println("Smallest positive missing number is : " + missingNumber(a, size));
   }
+
+  /*private static int missingNumberPractice(int[] a, int size) {
+
+    Set<Integer> set = Arrays.stream(a).boxed().collect(Collectors.toSet());
+
+    int count = 1;
+
+    for (int i = 0; i < set.size(); i++) {
+
+    }
+
+
+  }*/
 
   private static int missingNumber(int[] a, int size) {
     Map<Integer, Integer> map = new HashMap<>();

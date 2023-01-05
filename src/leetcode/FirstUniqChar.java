@@ -1,0 +1,73 @@
+package leetcode;
+
+
+//387. First Unique Character in a String
+
+/*Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1.
+
+
+
+        Example 1:
+
+        Input: s = "leetcode"
+        Output: 0
+        Example 2:
+
+        Input: s = "loveleetcode"
+        Output: 2
+        Example 3:
+
+        Input: s = "aabb"
+        Output: -1
+
+
+        Constraints:
+
+        1 <= s.length <= 105
+        s consists of only lowercase English letters.*/
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Optional;
+
+public class FirstUniqChar {
+    public static void main(String[] args) {
+//        String str = "leetcode";
+        String str = "loleleetcode";
+
+        int firstNotRepeatingCharIndex =  getFirstUniqueCharIndex(str);
+        System.out.println("firstNotRepeatingCharIndex====>"+firstNotRepeatingCharIndex);
+
+
+    }
+
+   static int getFirstUniqueCharIndex(String str) {
+        Map<Character, Integer> map = new LinkedHashMap<>();
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (!map.containsKey(c)) {
+               map.put(c,i);
+            } else {
+               map.put(c,-1);
+            }
+        }
+
+      /* Optional<Map.Entry<Character, Integer>> first = map.entrySet().stream().filter(entry -> entry.getValue() > -1).findFirst();
+
+        if(first.isPresent()){
+            return first.get().getValue();
+        }
+        return -1;*/
+
+        ///or
+
+       int min = Integer.MAX_VALUE;
+        for (char ch : map.keySet() ) {
+            if(map.get(ch)>-1 && map.get(ch)<min){
+                min = map.get(ch);
+            }
+        }
+        return min==Integer.MAX_VALUE?-1:min;
+    }
+}

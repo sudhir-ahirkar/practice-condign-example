@@ -8,13 +8,18 @@ import java.io.IOException;
  */
 public class TestException4 {
 
-    public void start() throws Exception {
+    public void start() throws IOException {
     }
 
-    public void ok() throws Exception {
+    public void ok() throws IOException {
     }
 
     public void foo() {
+
+    }
+
+
+    public void check() throws RuntimeException {
 
     }
 }

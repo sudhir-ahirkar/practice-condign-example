@@ -6,11 +6,15 @@ package com.overriding;
 public class A {
 
 
-    public Object m1(){
-       return  null;
+    public Object m1() {
+        return null;
     }
 
-    public Number m2(){
-        return  0;
+    public Number m2() {
+        return 0;
+    }
+
+    public String m3(){
+        return "";
     }
 }

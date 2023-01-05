@@ -19,7 +19,7 @@ public class FibonacciSeries {
 
         for (int i = 2; i < fiboArray.length; i++) {
 
-            fiboArray[i]=fiboArray[i]-fiboArray[0];
+            fiboArray[i]=fiboArray[i-1]+fiboArray[i-2];
 
         }
     }

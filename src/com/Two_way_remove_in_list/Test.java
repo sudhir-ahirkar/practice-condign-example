@@ -11,9 +11,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class Test {
 
     public static void main(String args[]){
-        final List<Integer> list = new ArrayList<Integer>();
+//        final List<Integer> list = new ArrayList<Integer>();
         
-//        final List<Integer> list = new CopyOnWriteArrayList();
+        final List<Integer> list = new CopyOnWriteArrayList();
 
         list.add(1);
         list.add(2);
@@ -29,7 +29,7 @@ public class Test {
 //
 //        To remove the _element_ 2 from the list, the following needs to be written:*/
 
-        list.remove(2);
+//        list.remove(2);
 //        list.remove(Integer.valueOf(2));
 
 //        list.remove(new Integer(2));
@@ -38,11 +38,12 @@ public class Test {
         System.out.println("list====>"+list);
 
 
-//        for (Integer i: list){
-//
-//            list.remove(i);
-//
-//        }
+        for (Integer i: list){
+
+            list.remove(i);
+            list.add(9);
+
+        }
         
         list.forEach(System.out::println);
 

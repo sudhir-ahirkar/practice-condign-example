@@ -83,28 +83,18 @@ public class LinkedList {
   public static void insertAtLast(LinkedList list, int data) {
     Node newNode = new Node(data);
     newNode.next = null;
-
     Node last = list.head;
-
     while (last.next != null) {
-
       last = last.next;
     }
-
     last.next = newNode;
-
-
   }
 
   public static void insertAtIndex(LinkedList list, int index, int data) {
-
     Node newNode = new Node(data);
-
     Node currentNode = list.head;
     for (int i = 0; i < index - 1; i++) {
-
       if (currentNode.next != null) {
-
         currentNode = currentNode.next;
       }
     }
@@ -128,7 +118,6 @@ public class LinkedList {
   }
 
   public static void main(String args[]) {
-
     LinkedList linkedList = new LinkedList();
     insert(linkedList, 9);
     insert(linkedList, 7);

@@ -30,8 +30,10 @@ public class Exercise34 {
 
 //    }
 
-  }
+   int l= longest_sequence(arr);
+    System.out.println("longest sequence===>"+l);
 
+  }
   public static int longest_sequence(int[] nums) {
     final HashSet<Integer> h_set = new HashSet<Integer>();
     for (int i : nums)

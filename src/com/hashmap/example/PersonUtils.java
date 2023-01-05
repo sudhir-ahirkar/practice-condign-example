@@ -28,7 +28,7 @@ public class PersonUtils {
     
    List<Integer> as = Arrays.asList(1,5,8,9,4,5,8,3,8);
    Set<Integer> hs=new TreeSet(as);
-   Collections.sort(hs);
+//   Collections.sort(hs);
    System.out.println(hs);
 //    Set<Person> s=new TreeSet<>(persons);
     

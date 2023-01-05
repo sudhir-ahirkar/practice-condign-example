@@ -39,7 +39,7 @@ public class Test {
         //to use collection sort first we should implements comparable interface
         Collections.sort(employees);
         // if you want to reverse then we can use following
-        // Collections.sort(employees, Comparator.reverseOrder());
+//         Collections.sort(employees, Comparator.reverseOrder());
         System.out.println("employees=======>"+employees);
 
 
@@ -57,7 +57,9 @@ public class Test {
         //to use collection sort first we should implements comparable interface
 //        Collections.sort(employees);
         // if you want to reverse then we can use following
-        // Collections.sort(employees, Comparator.reverseOrder());
+         Collections.sort(employees, Comparator.reverseOrder());
+//        Collections.sort(employees, Collections.reverseOrder());
+
         Collections.sort(employeeUsinComparoats,new MyComparatorOnName());
         System.out.println("employeeUsinComparoats=======>"+employeeUsinComparoats);
         Collections.sort(employeeUsinComparoats,new MycompatorOnAge());

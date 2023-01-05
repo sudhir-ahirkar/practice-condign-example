@@ -6,11 +6,13 @@ package com.practice.stringexample.stringPalindrome;
 public class StringPalindrome {
 
     public static void main(String args[]){
-        System.out.print("Runtime.getRuntime()==========>"+Runtime.getRuntime());
+        System.out.println("Runtime.getRuntime()==========>"+Runtime.getRuntime());
+
+        System.out.println("Runtime.getRuntime() Processor ==========>"+Runtime.getRuntime().availableProcessors());
 
 
-
-        if(isPalindromeString("aba"))
+//        if(isPalindromeString("aba")
+        if(isPalindromWithTwoPointer("aba"))
             System.out.print("String is Palindrome");
         else
             System.out.print("String is not Palindrome");
@@ -29,5 +31,31 @@ public class StringPalindrome {
                 return false;
         }
         return true;
+
+    }
+
+    private static boolean isPalindromWithTwoPointer(String str){
+
+        if(str==null){
+            return false;
+        }
+        if(str.length()==1){
+            return true;
+        }
+
+        int lhs=0;
+        int rhs=str.length()-1;
+
+        while(lhs<rhs){
+            if(!(str.charAt(lhs)==str.charAt(rhs))){
+                return false;
+            }
+            lhs++;
+            rhs--;
+        }
+
+        return true;
+
+
     }
 }

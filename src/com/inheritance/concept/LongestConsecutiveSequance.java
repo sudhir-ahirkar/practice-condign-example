@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class LongestConsecutiveSequance {
   public static void main(String[] args) {
-    int nums[] = { 3, 200, 2, 4, 70, 5, 60, 57, 49, 56, 1, 124, 45, 62, 111, 61, 784, 59, 58};
+    int nums[] = { 3, 50, 2, 4, 70, 5, 47, 178, 46, 51, 1, 60, 45, 62, 111, 49, 784, 59, 48};
     System.out.println("Original array length: " + nums.length);
     System.out.print("Array elements are: ");
     for (int i = 0; i < nums.length; i++) {
@@ -25,20 +25,15 @@ public class LongestConsecutiveSequance {
     for (int i : nums) {
       int length = 1;
       for (int j = i - 1; h_set.contains(j); j--) {
-
-        h_set.remove(j);
+//        h_set.remove(j);
         ++length;
       }
-
       for (int j = i + 1; h_set.contains(j); j++) {
-        h_set.remove(j);
+//        h_set.remove(j);
         ++length;
       }
-
       longest_sequence_len = Math.max(longest_sequence_len, length);
-
     }
-
     return longest_sequence_len;
   }
 

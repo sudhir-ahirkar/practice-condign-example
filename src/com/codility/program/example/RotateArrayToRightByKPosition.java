@@ -7,12 +7,12 @@ public class RotateArrayToRightByKPosition {
   public static void main(String[] args) {
     int[] arr= {3, 8, 9, 7, 6} ;
     int k=3;
-    int[] processedArr=rotateArrayByK(arr,k);
+    int[] processedArr=rotateRightArrayByK(arr,k);
     Arrays.stream(processedArr).forEach(System.out::println);
 
   }
 
-  private static int[] rotateArrayByK(int[] arr, int k) {
+  private static int[] rotateRightArrayByK(int[] arr, int k) {
     for (int i = 0; i < k; i++) {
       int temp = arr[arr.length - 1];
       for (int j = arr.length - 1; j > 0; j--) {
