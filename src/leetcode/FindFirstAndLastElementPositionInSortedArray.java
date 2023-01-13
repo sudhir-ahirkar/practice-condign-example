@@ -43,7 +43,7 @@ public class FindFirstAndLastElementPositionInSortedArray {
                 high = mid - 1;
             } else if (nums[mid] == target) {
                 ans[0] = mid;
-                high = mid - 1;
+                low = mid + 1;
             } else {
                 low = mid + 1;
             }
@@ -57,7 +57,7 @@ public class FindFirstAndLastElementPositionInSortedArray {
                 high = mid - 1;
             } else if (nums[mid] == target) {
                 ans[1] = mid;
-                low = mid + 1;
+                high = mid - 1;
             } else {
                 low = mid + 1;
             }

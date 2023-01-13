@@ -34,8 +34,10 @@ public class PlusOne {
     public static void main(String[] args) {
 
 //        int[] arr = {0};
-//        int[] arr = {9,9};
-        int[] arr = {1, 2, 3, 9};
+        int[] arr = {9};
+        //        int[] arr = {9,9};
+
+//        int[] arr = {1, 2, 3, 9};
 
         plusOne(arr);
     }

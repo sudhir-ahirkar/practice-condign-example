@@ -4,7 +4,7 @@ public class IsSubsequence {
     public static void main(String[] args) {
         String s = "abc", t = "ahbgdc";
         boolean isSubsequence = isSubsequence(s, t);
-        System.out.println("False ===>" + isSubsequence);
+        System.out.println("isSubsequence  ===>" + isSubsequence);
     }
 
     public static boolean isSubsequence(String s, String t) {

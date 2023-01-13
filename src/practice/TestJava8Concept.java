@@ -68,8 +68,10 @@ public class TestJava8Concept {
 
         Map<String, Set<Employee>> hasMap = empLst.stream().collect(Collectors.groupingBy(Employee::getDept, Collectors.toSet()));
         Map<String, Set<Employee>> treeMap = empLst.stream().collect(Collectors.groupingBy(Employee::getDept, TreeMap::new, Collectors.toSet()));
+        Map<String, Set<Employee>> linkedHasMap = empLst.stream().collect(Collectors.groupingBy(Employee::getDept,LinkedHashMap::new, Collectors.toSet()));
 
         System.out.println("hasMap===>"+hasMap);
+        System.out.println("linkedHasMap===>"+linkedHasMap);
         System.out.println("treeMap===>"+treeMap);
 
         String riddle = "ab?ac?";

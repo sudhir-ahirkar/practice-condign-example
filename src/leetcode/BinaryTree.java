@@ -7,7 +7,6 @@ public class BinaryTree {
         TreeNode left;
         TreeNode right;
         int data;
-
         public TreeNode(int data){
             this.data=data;
         }
@@ -26,6 +25,5 @@ public class BinaryTree {
         sec.left=fifth;
         sec.right=four;
         four.right=sixth;
-
     }
 }

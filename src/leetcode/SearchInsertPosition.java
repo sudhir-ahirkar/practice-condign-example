@@ -2,8 +2,8 @@ package leetcode;
 
 public class SearchInsertPosition {
     public static void main(String[] args) {
-        int[] nums = {1, 3, 8, 6};
-        int target = 2;
+        int[] nums = {1, 3, 6, 8};
+        int target = 1;
         int insertIndex = searchInsert(nums,target);
         System.out.println("Element need to insert at position "+insertIndex);
     }

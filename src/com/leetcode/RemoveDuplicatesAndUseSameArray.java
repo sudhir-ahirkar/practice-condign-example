@@ -1,5 +1,7 @@
 package com.leetcode;
 
+import java.util.Arrays;
+
 public class RemoveDuplicatesAndUseSameArray {
     public static void main(String[] args) {
 //        int[]  nums = {1,1,2};
@@ -17,6 +19,7 @@ public class RemoveDuplicatesAndUseSameArray {
             // if different then increment and store the new value
             nums[++i] = nums[j];
         }
+        System.out.println(Arrays.toString(nums));
         // return i + 1; after placing i unique elements.
         return i+1;
     }

@@ -6,7 +6,7 @@ public class FindGivenElement {
 
     public static void main(String[] args) {
         // Given Array
-        int[] arr = {0,2, 1, 3, -1, 8,0};
+        int[] arr = {0, 2, 1, 3, -1, 8,0};
         // Target element which need to find in given array
         int target = 3;
         // sort the given array
@@ -76,11 +76,8 @@ public class FindGivenElement {
 
          int lhs=0; int rhs=arr.length-1;
           int result = -1;
-
          while(lhs<=rhs){
-
            int mid = (lhs+rhs)/2;
-
            if(arr[mid]<target){
              lhs = mid+1;
            }else if (arr[mid]==target){
@@ -89,9 +86,7 @@ public class FindGivenElement {
            }else{
              rhs = mid-1;
            }
-
          }
-
          return result;
     }
 }

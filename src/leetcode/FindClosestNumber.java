@@ -1,6 +1,6 @@
 package leetcode;
 
-public class FindClosestNumber {
+public class  FindClosestNumber {
 
     public static void main(String[] args) {
 //        int[] arr = {-100000,-100000};

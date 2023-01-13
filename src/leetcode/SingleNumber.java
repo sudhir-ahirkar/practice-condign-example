@@ -39,16 +39,22 @@ public class SingleNumber {
         int[] arr =  {4,1,2,1,2};
 //        int[] arr =  {2,2,1};
 //        int[] arr =  {2,2,1};
-
-        int num =singleNumber(arr);
+        int num =singleNumber1(arr);
         System.out.println("Single Number from Array : "+ num);
+    }
+
+    // Mine solution
+    public static int singleNumber1(int[] nums) {
+        int singleNum = 0;
+        for (int i = 0; i < nums.length; i++) {
+           singleNum = singleNum ^ nums[i];
+        }
+        return singleNum;
     }
 
     public static int singleNumber(int[] nums) {
         List<Integer> lst = Arrays.stream(nums).boxed().collect(Collectors.toList());
-
         Integer integer = lst.stream().filter(e -> Collections.frequency(lst, e) == 1).findAny().get();
-
         return integer;
     }
 

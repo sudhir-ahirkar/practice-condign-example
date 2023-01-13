@@ -7,15 +7,15 @@ import java.util.stream.Collectors;
 
 public class MissingPositiveNumber {
     public static void main(String[] args) {
-//        int[] arr = {1,2,0};
+        int[] arr = {1,2,0};
 //        int[] arr = {3,4,-1,1};
-        int[] arr = {7,8,9,11,12};
+//        int[] arr = {7,8,9,11,12};
 
         System.out.println("Missing Positive Num ==>"+firstMissingPositive(arr));
     }
 
     public static  int firstMissingPositive(int[] nums) {
-       /* int misssingPositiveNum = 1;
+        int misssingPositiveNum = 1;
 
         for (int i = 0; i <= nums.length - 1; i++) {
             if (nums[i] == 0 || nums[i] < 0) {
@@ -29,8 +29,9 @@ public class MissingPositiveNumber {
 
         }
         System.out.println(misssingPositiveNum);
-        return misssingPositiveNum;*/
-        int count = 1;
+        return misssingPositiveNum;
+        // My approach
+       /* int count = 1;
         Set<Integer> setOfNum = Arrays.stream(nums).boxed().collect(Collectors.toSet());
 
         for (int i = 0; i < setOfNum.size(); i++) {
@@ -39,7 +40,7 @@ public class MissingPositiveNumber {
             }
             count++;
         }
-        return count;
+        return count;*/
 
         /*setOfNum.forEach(integer -> {
             if (!setOfNum.contains(count)) {

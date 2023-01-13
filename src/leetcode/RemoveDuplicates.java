@@ -47,10 +47,25 @@ package leetcode;
         Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
         It does not matter what you leave beyond the returned k (hence they are underscores).*/
 
+import java.util.Arrays;
+
 public class RemoveDuplicates {
     public static void main(String[] args) {
         int[] nums = {1,1,2};
-        removeDuplicates(nums);
+        int num = removeDuplicates(nums);
+        System.out.println("Arrays ===>"+ Arrays.toString(nums));
+        System.out.println("num====>"+num);
+    }
+    //Mine
+    private static int removeDuplicates1(int[] nums){
+       int start = 0;
+        for (int next = 1; next < nums.length; next++) {
+            if(nums[start]==nums[next]){
+               continue;
+            }
+            nums[start++] = nums[next];
+        }
+        return start;
     }
 
     public static int removeDuplicates(int[] nums) {

@@ -12,7 +12,9 @@ public class RemoveElement {
 
     public static int removeElement(int[] nums, int val) {
         Integer [] lst = Arrays.stream(nums).boxed().filter(e->e!=val).toArray(value -> new Integer[value]);
-        Arrays.stream(lst).forEach(integer -> System.out.println(integer));
+        Integer [] lst1 = Arrays.stream(nums).boxed().filter(e->e!=val).toArray(Integer[]::new);
+        int [] lst2 = Arrays.stream(nums).filter(e->e!=val).toArray();
+//        Arrays.stream(lst).forEach(integer -> System.out.println(integer));
         return lst.length;
     }
 }

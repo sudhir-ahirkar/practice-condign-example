@@ -1,6 +1,8 @@
 package leetcode;
 
 
+import java.util.Arrays;
+
 /*Method Prototype
         void maxMin(int[] arr)
         Output
@@ -32,6 +34,29 @@ public class CheckMaxMin {
         }
     }
 
+    //--------------OR-------------------
+
+
+    public static void maxMin1(int[] arr) {
+
+        int[] resArr = new int[arr.length];
+        boolean checkMax = true;
+        int max = arr.length-1;
+        int min = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+             if(checkMax){
+                 resArr[i] = arr[max];
+                 max--;
+             }else{
+                 resArr[i] = arr[min];
+                 min++;
+             }
+            checkMax=!checkMax;
+        }
+        System.out.println("resArr===>"+ Arrays.toString(resArr));
+    }
+
     public static void main(String args[]) {
 
         int[] arr = {1,2,3,4,5,6,7,8,9};
@@ -40,7 +65,7 @@ public class CheckMaxMin {
             System.out.print(arr[i] + " ");
         System.out.println();
 
-        maxMin(arr);
+        maxMin1(arr);
 
         System.out.print("Array after min/max: ");
         for (int i = 0; i < arr.length; i++)

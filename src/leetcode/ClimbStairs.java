@@ -29,7 +29,6 @@ package leetcode;
 public class ClimbStairs {
 
     public static void main(String[] args) {
-
         int possible_ways =climbStairs(5);
         System.out.println("possible_ways==>"+possible_ways);
     }
@@ -37,7 +36,6 @@ public class ClimbStairs {
     public static int climbStairs(int n) {
         if(n==1)
             return 1;
-
         int[] arr = new int[n];
         arr[0]=1;
         arr[1]=2;

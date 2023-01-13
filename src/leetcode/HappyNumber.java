@@ -27,7 +27,9 @@ public class HappyNumber {
             1 <= n <= 231 - 1*/
 
     public static void main(String[] args) {
-        int n = 19;
+//        int n = 19;
+        int n = 11;
+
         boolean check = happyNum(n);
         System.out.println("check===>" + check);
     }

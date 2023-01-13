@@ -40,7 +40,7 @@ public class ReverseWords {
 
     public static void main(String[] args) {
         String s  = "a good   example";
-        String str = reverseWords(s);
+        String str = reverseWords1(s);
         System.out.println("str===>"+str);
     }
 
@@ -58,6 +58,26 @@ public class ReverseWords {
             result.append(st).append(" ");
         }
         return  result.toString().trim();
+    }
+
+
+    // Another way
+    public static String reverseWords1(String s){
+        StringBuilder builder = new StringBuilder();
+        String[] arr = s.split(" ");
+        int start = 0;
+        int end = arr.length-1;
+        while(start<end){
+            String temp = arr[start].trim();
+            arr[start] = arr[end].trim();
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+        for (String str :arr) {
+            builder.append(str).append(" ");
+        }
+        return builder.toString().trim() ;
     }
 
 }

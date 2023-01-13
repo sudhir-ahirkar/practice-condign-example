@@ -22,7 +22,7 @@ public class FlatMapexample {
         String phoneVal2 = users.stream().map(user->user.getPhones()).flatMap(phones->phones.stream()).filter(phone->phone.equals("78916587")).findAny().orElseThrow(()->new RuntimeException("Requested phone not found"));
         System.out.println("phoneVal2====>"+phoneVal2);
        // if not found then return some default value
-        String phoneVal3 = users.stream().map(user->user.getPhones()).flatMap(phones->phones.stream()).filter(phone->phone.equals("543")).findAny().orElse("default value is "+88888888);
+        String phoneVal3 = users.stream().flatMap(user->user.getPhones().stream()).filter(phone->phone.equals("543")).findAny().orElse("default value is "+88888888);
         System.out.println("phoneVal3====>"+phoneVal3);
 
 //        String phoneVal4 = users.stream().map(user->user.getPhones()).flatMap(phones->phones.stream()).filter(phone->phone.equals("543")).findAny().orElseGet("1245");

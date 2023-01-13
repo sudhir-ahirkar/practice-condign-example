@@ -41,12 +41,20 @@ import java.util.Arrays;
 public class LongestCommonPrefix {
 
     public static void main(String[] args) {
-      String[]  str = {"flower","flow","flight"};
-      String logStr = longestCommonPrefix(str);
-        System.out.println("Longest Common Prefix ==>"+logStr);
-
+        String[] str = {"flower", "flow", "flight"};
+        String logStr = longestCommonPrefix1(str);
+        System.out.println("Longest Common Prefix ==>" + logStr);
         System.out.println(Arrays.toString(str));
+    }
 
+    public static String longestCommonPrefix1(String[] arr) {
+        String prefix = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            while (!arr[i].startsWith(prefix)) {
+                prefix = prefix.substring(0, prefix.length() - 1);
+            }
+        }
+        return prefix;
     }
 
     public static String longestCommonPrefix(String[] strs) {

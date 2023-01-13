@@ -35,7 +35,6 @@ public class FindClosestNumber {
             } else if (Math.abs(num) == minNum) {
                 closeNum = Math.max(closeNum, num);
             }
-
         }
         System.out.println("clNumSet size ==>"+clNumSet);
         return closeNum;

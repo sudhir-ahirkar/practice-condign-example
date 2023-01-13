@@ -31,20 +31,29 @@ package leetcode;
 public class BuySellStock {
 
     public static void main(String[] args) {
-
-        int[] prices = {7,1,5,3,6,4};
-        int maxProfit = maxProfit(prices);
-        System.out.println("Max profit ==>"+maxProfit);
-
+        int[] prices = {7, 1, 5, 3, 6, 4};
+        int maxProfit = maxProfit1(prices);
+        System.out.println("Max profit ==>" + maxProfit);
     }
+
+    public static int maxProfit1(int[] prices) {
+        int min = Integer.MAX_VALUE;
+        int max = 0;
+        for (int i = 0; i < prices.length; i++) {
+            min = Math.min(prices[i], min);
+            max = Math.max((prices[i] - min), max);
+        }
+        return max;
+    }
+
 
     public static int maxProfit(int[] prices) {
         int min = Integer.MAX_VALUE;
         int max = 0;
         for (int i = 0; i < prices.length; i++) {
-                min = Math.min(prices[i],min);
-                System.out.println("(prices[i]-min)===>"+(prices[i]-min));
-                max = Math.max((prices[i]-min),max);
+            min = Math.min(prices[i], min);
+            System.out.println("(prices[i]-min)===>" + (prices[i] - min));
+            max = Math.max((prices[i] - min), max);
         }
         return max;
     }
