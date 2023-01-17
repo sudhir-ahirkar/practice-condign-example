@@ -52,6 +52,13 @@ public class LinkedList {
         System.out.println("Length of head node ==>" + lengthOfNode());
         System.out.println("Search node in Head node ==>" + search(100));
         System.out.println("==============================================");
+
+        System.out.println("Get the Last node from Head ===>");
+        Node lastNode = findLastNode(head);
+        System.out.println("After find last node and print complete last node ===>");
+        print(lastNode);
+        System.out.println();
+        System.out.println("Last node element =====>"+lastNode.data);
         Node node = reverse();
         System.out.println("Reverse node element ==> ");
         print(node);
@@ -184,6 +191,15 @@ public class LinkedList {
             fstNode = fstNode.next.next;
         }
         return slwNode;
+    }
+
+    static Node findLastNode(Node node) {
+        Node temp = null;
+        while(node!=null){
+            temp = node;
+            node = node.next;
+        }
+        return temp;
     }
 
 }

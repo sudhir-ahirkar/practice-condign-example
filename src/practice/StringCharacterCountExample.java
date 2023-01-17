@@ -42,6 +42,7 @@ public class StringCharacterCountExample {
         Map<String, Long> charCount5  =
                 Arrays.asList(str.split("")).stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 
+
         System.out.println("charCount5====>"+charCount5);
 
 

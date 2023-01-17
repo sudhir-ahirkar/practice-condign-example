@@ -19,6 +19,14 @@ public class SortMapByValue {
         Map<String, Integer> sorted = map.entrySet().stream().sorted(comparingByValue()).
                 collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2, LinkedHashMap::new));
         System.out.println("sorted====>" + sorted);
+
+        // Mine for practice only
+
+        LinkedHashMap<String, Integer> myPractice = map.entrySet().stream().sorted(comparingByValue())
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+
+        System.out.println("myPractice====>" + myPractice);
+
         //more clean way ==>
         Map<String, Integer> sorted1 = map.entrySet().stream().sorted(comparingByValue()).
                 collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));

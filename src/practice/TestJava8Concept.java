@@ -47,18 +47,20 @@ public class TestJava8Concept {
         Map<String, Employee> deptHighestSalEmpMap = empLst.stream().collect(Collectors.groupingBy(Employee::getDept,
                 Collectors.collectingAndThen(Collectors.maxBy(Comparator.comparingInt(Employee::getSalary)), Optional::get)));
 
-//        deptHighestSalEmpMap.entrySet().stream().sorted(e->e.comparingByValue()).
-//        LinkedHashMap<String, Employee> collect = deptHighestSalEmpMap.entrySet()
-//                .stream()
-//                .sorted(e -> Comparator.comparingInt(e.getValue().getSalary()))
-//                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+//        empLst.stream().collect(Collectors.groupingBy(Employee::getDept,Collectors.reducing(Collectors.)));
 
+//        deptHighestSalEmpMap.entrySet().stream().sorted(e->e.comparingByValue()).
+       /* LinkedHashMap<String, Employee> collect = deptHighestSalEmpMap.entrySet()
+                .stream()
+                .sorted(comparingByValue())
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+*/
 
 
         Employee employee = empLst.stream().sorted(Comparator.comparingInt(Employee::getSalary).reversed()).findAny().get();
         System.out.println("employee====>"+employee);
 
-        Employee secHighSalEmployee = empLst.stream().sorted(Comparator.comparingInt(Employee::getSalary).reversed()).limit(2).skip(1).findAny().get();
+        Employee secHighSalEmployee = empLst.stream().sorted(Comparator.comparingInt(Employee::getSalary).reversed()).limit(2).skip(1).findFirst().get();
         System.out.println("secHighSalEmployee====>"+secHighSalEmployee);
 
         Map<String, Employee> highestSalEmployee = empLst.stream().collect(Collectors.groupingBy(Employee::getDept,
