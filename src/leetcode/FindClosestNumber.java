@@ -20,7 +20,7 @@ public class  FindClosestNumber {
             if(Math.abs(num)<minNum){
                 closeNumber = num;
                 minNum = Math.abs(minNum);
-            }else if(num==Math.abs(minNum)){
+            }else if(minNum==Math.abs(num)){
                 closeNumber = num;
             }
         }

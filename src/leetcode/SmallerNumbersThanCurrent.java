@@ -41,7 +41,6 @@ public class SmallerNumbersThanCurrent {
     public static int[] smallerNumbersThanCurrent(int[] nums) {
         int[] arr = new int[nums.length];
         List<Integer> lst = Arrays.stream(nums).boxed().collect(Collectors.toList());
-
         for (int i = 0; i < nums.length; i++) {
             int target = nums[i];
             arr[i] = (int) lst.stream().filter(e -> e < target).count();

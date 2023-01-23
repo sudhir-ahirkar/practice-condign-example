@@ -34,13 +34,41 @@ public class PlusOne {
     public static void main(String[] args) {
 
 //        int[] arr = {0};
-        int[] arr = {9};
-        //        int[] arr = {9,9};
+//        int[] arr = {9};
+                int[] arr = {9,9};
 
 //        int[] arr = {1, 2, 3, 9};
 
-        plusOne(arr);
+//        plusOne(arr);
+        plusOne1(arr);
+
     }
+
+    private static int[] plusOne1(int[] arr) {
+        int lastIndex = arr.length-1;
+        for (int i = lastIndex; i >=0; i--) {
+            if(arr[lastIndex]<9){
+                arr[i]++;
+                return arr;
+            }
+            arr[i]=0;
+        }
+        int[] ans = new int[arr.length+1];
+        ans[0]=1;
+        return ans;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
     public static int[] plusOne(int[] digits) {
         int index = digits.length - 1;

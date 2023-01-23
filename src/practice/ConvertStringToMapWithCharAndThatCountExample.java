@@ -17,7 +17,6 @@ public class ConvertStringToMapWithCharAndThatCountExample {
 
         Map<Character, Long> mapChar = str.chars().mapToObj(e -> (char) e).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 //        Map<Character, Long> mapChar = str.chars().mapToObj(e -> Character.).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-
         System.out.println("mapChar====>"+mapChar);
 
 
@@ -30,7 +29,6 @@ public class ConvertStringToMapWithCharAndThatCountExample {
 //            }else{
 //                mapCharArr.put(c,++value);
 //            }
-
             /// OR /////
             int charFreq = mapCharArr.getOrDefault(c, 0) + 1;
             mapCharArr.put(c,charFreq);

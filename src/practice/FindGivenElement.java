@@ -2,7 +2,7 @@ package practice;
 
 import java.util.Arrays;
 
-public class FindGivenElement {
+public class  FindGivenElement {
 
     public static void main(String[] args) {
         // Given Array

@@ -48,9 +48,7 @@ public class  FirstUniqChar {
     // Using Java 8
     /// our requirement can't fullfill using below approach as index needed
     static int getFirstUniqueCharIndex1(String str) {
-
-//        Map<Character, Long> collect = str.chars().mapToObj(e -> (char) e).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-
+//      Map<Character, Long> collect = str.chars().mapToObj(e -> (char) e).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         Map<Character, Long> linkedHashMap = str.chars().mapToObj(e -> (char) e).collect(Collectors.groupingBy(Function.identity(),LinkedHashMap::new, Collectors.counting()));
         System.out.println("linkedHashMap===>"+linkedHashMap);
 
@@ -58,9 +56,7 @@ public class  FirstUniqChar {
         if(optionalEntry.isPresent()){
            return Math.toIntExact(optionalEntry.get().getValue());
         }
-
         return -1;
-
     }
 
 
@@ -85,7 +81,7 @@ public class  FirstUniqChar {
         ///or
 
        int min = Integer.MAX_VALUE;
-        for (char ch : map.keySet() ) {
+        for (char ch : map.keySet()) {
             if(map.get(ch)>-1 && map.get(ch)<min){
                 min = map.get(ch);
             }

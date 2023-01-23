@@ -32,8 +32,8 @@ public class lengthOfLongestSubstring {
 //          String s = "pwwkew";
         String s1 = "abcabcbefghb";
 //        String s ="aab";
-        int lenght = lengthOfLongestSubstring2(s1);
-//        int lenght = my_lengthOfLongestSubstring(s);
+//        int lenght = lengthOfLongestSubstring2(s1);
+        int lenght = my_lengthOfLongestSubstring(s1);
     }
 
     public static int lengthOfLongestSubstring2(String str) {
@@ -75,10 +75,8 @@ public class lengthOfLongestSubstring {
                 longestString = map.keySet().toString();
             }
         }
-
         System.out.println("Longest Substring :" + longestString);
         System.out.println("Longest Substring Lenght :" + longestSubstringLenght);
-
         return longestSubstringLenght;
     }
 

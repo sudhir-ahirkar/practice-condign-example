@@ -26,8 +26,39 @@ public class MoveZeroes {
     public static void main(String[] args) {
 
         int[] arr = {1,8,0,10,9,1,0,7};
-        int[] processedArr = moveZeroes(arr);
+//        int[] processedArr = moveZeroes(arr);
+//        int[] processedArr = moveZeroes1(arr);
+        int[] processedArr = moveZeroes2(arr);
+
         Arrays.stream(processedArr).forEach(System.out::println);
+    }
+
+    // Move zero to right
+    private static int[] moveZeroes2(int[] arr) {
+        int i = 0;
+        for (int j = 0; j < arr.length; j++) {
+            if(arr[j]==0){
+                int temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp;
+                i++;
+            }
+        }
+        return arr;
+    }
+
+    // Move zero to keft
+    private static int[] moveZeroes1(int[] arr) {
+        int i=0;
+        for (int j = 0; j < arr.length; j++) {
+            if(arr[j]!=0){
+                int temp =arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp;
+                i++;
+            }
+        }
+        return arr;
     }
 
     public static int[] moveZeroes(int[] nums){

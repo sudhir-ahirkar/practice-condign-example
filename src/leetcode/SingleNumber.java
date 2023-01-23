@@ -39,7 +39,7 @@ public class SingleNumber {
         int[] arr =  {4,1,2,1,2};
 //        int[] arr =  {2,2,1};
 //        int[] arr =  {2,2,1};
-        int num =singleNumber1(arr);
+        int num = singleNumber1(arr);
         System.out.println("Single Number from Array : "+ num);
     }
 
