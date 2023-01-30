@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.HashSet;
+
 public class LinkedList {
     static Node head;
 
@@ -16,9 +18,13 @@ public class LinkedList {
         insert(2);
         insert(4);
         insert(4);
-        insert(7);
+        insert(2);
         insert(9);
         insert(15);
+        print(head);
+        System.out.println();
+        System.out.println("Remove duplicate Node from Unsorted Linked List=====>");
+        removeDuplicateFromUnsortedLst();
         print(head);
         System.out.println();
         System.out.println("Insert the New node in Sorted LinkedList ===>");
@@ -85,6 +91,24 @@ public class LinkedList {
             current = current.next;
         }
 
+    }
+
+    private static void removeDuplicateFromUnsortedLst() {
+        Node current = head;
+        Node previous = head;
+        HashSet<Integer> nodeHashSet = new HashSet<>();
+        if (head != null) {
+            while (current != null) {
+                if (nodeHashSet.contains(current.data)) {
+                    previous.next = current.next;
+                    current = current.next;
+                } else {
+                    previous = current;
+                    nodeHashSet.add(current.data);
+                    current = current.next;
+                }
+            }
+        }
     }
 
     private static void insert(int data) {
